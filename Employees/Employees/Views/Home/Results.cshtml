@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EmployeesViewModel>
+@{
+    ViewData["Title"] = "Results";
+}
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Employee Id #1</th>
+                <th>Employee Id #2</th>
+                <th>Project Id</th>
+                <th>Days worked</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in @Model)
+            {
+                <tr>
+                    <td>@data.Employee1Id</td>
+                    <td>@data.Employee2Id</td>
+                    <td>@data.ProjectId</td>
+                    <td>@data.DaysWorked</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
