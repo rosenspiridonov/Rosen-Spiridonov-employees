@@ -11,8 +11,8 @@ namespace Employees.Common.ClassMaps
         {
             Map(e => e.EmpId);
             Map(e => e.ProjectId);
-            Map(e => e.DateFrom);
-            Map(e => e.DateTo).TypeConverter<NullableDateTimeConverter>();
+            Map(e => e.DateFrom).TypeConverter<DateTimeTypeConverter>();
+            Map(e => e.DateTo).TypeConverter<NullableDateTimeTypeConverter>();
         }
     }
 }
